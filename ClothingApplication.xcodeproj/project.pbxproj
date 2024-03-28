@@ -10,6 +10,10 @@
 		59EBDB122BB595B500F4B86C /* ClothingApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EBDB112BB595B500F4B86C /* ClothingApplicationApp.swift */; };
 		59EBDB162BB595B700F4B86C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59EBDB152BB595B700F4B86C /* Assets.xcassets */; };
 		59EBDB192BB595B700F4B86C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59EBDB182BB595B700F4B86C /* Preview Assets.xcassets */; };
+		59EBDB2C2BB5A14500F4B86C /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59EBDB282BB5A14500F4B86C /* Gilroy-Regular.ttf */; };
+		59EBDB2D2BB5A14500F4B86C /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59EBDB292BB5A14500F4B86C /* Gilroy-Bold.ttf */; };
+		59EBDB2E2BB5A14500F4B86C /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59EBDB2A2BB5A14500F4B86C /* Gilroy-Medium.ttf */; };
+		59EBDB2F2BB5A14500F4B86C /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59EBDB2B2BB5A14500F4B86C /* Gilroy-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +21,10 @@
 		59EBDB112BB595B500F4B86C /* ClothingApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingApplicationApp.swift; sourceTree = "<group>"; };
 		59EBDB152BB595B700F4B86C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59EBDB182BB595B700F4B86C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		59EBDB282BB5A14500F4B86C /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Regular.ttf"; path = "../../../Gilroy-Regular.ttf"; sourceTree = "<group>"; };
+		59EBDB292BB5A14500F4B86C /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Bold.ttf"; path = "../../../Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		59EBDB2A2BB5A14500F4B86C /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Medium.ttf"; path = "../../../Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		59EBDB2B2BB5A14500F4B86C /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-SemiBold.ttf"; path = "../../../Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,7 @@
 		59EBDB102BB595B500F4B86C /* ClothingApplication */ = {
 			isa = PBXGroup;
 			children = (
+				59EBDB1F2BB5A08D00F4B86C /* Font */,
 				59EBDB112BB595B500F4B86C /* ClothingApplicationApp.swift */,
 				59EBDB152BB595B700F4B86C /* Assets.xcassets */,
 				59EBDB172BB595B700F4B86C /* Preview Content */,
@@ -62,6 +71,17 @@
 				59EBDB182BB595B700F4B86C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		59EBDB1F2BB5A08D00F4B86C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				59EBDB292BB5A14500F4B86C /* Gilroy-Bold.ttf */,
+				59EBDB2A2BB5A14500F4B86C /* Gilroy-Medium.ttf */,
+				59EBDB282BB5A14500F4B86C /* Gilroy-Regular.ttf */,
+				59EBDB2B2BB5A14500F4B86C /* Gilroy-SemiBold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +143,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				59EBDB192BB595B700F4B86C /* Preview Assets.xcassets in Resources */,
+				59EBDB2F2BB5A14500F4B86C /* Gilroy-SemiBold.ttf in Resources */,
+				59EBDB2C2BB5A14500F4B86C /* Gilroy-Regular.ttf in Resources */,
+				59EBDB2E2BB5A14500F4B86C /* Gilroy-Medium.ttf in Resources */,
 				59EBDB162BB595B700F4B86C /* Assets.xcassets in Resources */,
+				59EBDB2D2BB5A14500F4B86C /* Gilroy-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

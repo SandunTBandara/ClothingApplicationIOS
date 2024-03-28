@@ -25,6 +25,7 @@
 		59EBDB292BB5A14500F4B86C /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Bold.ttf"; path = "../../../Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		59EBDB2A2BB5A14500F4B86C /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Medium.ttf"; path = "../../../Gilroy-Medium.ttf"; sourceTree = "<group>"; };
 		59EBDB2B2BB5A14500F4B86C /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-SemiBold.ttf"; path = "../../../Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
+		59EBDB302BB5A19500F4B86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		59EBDB102BB595B500F4B86C /* ClothingApplication */ = {
 			isa = PBXGroup;
 			children = (
+				59EBDB302BB5A19500F4B86C /* Info.plist */,
 				59EBDB1F2BB5A08D00F4B86C /* Font */,
 				59EBDB112BB595B500F4B86C /* ClothingApplicationApp.swift */,
 				59EBDB152BB595B700F4B86C /* Assets.xcassets */,
@@ -294,6 +296,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ClothingApplication/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClothingApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -322,6 +325,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ClothingApplication/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClothingApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

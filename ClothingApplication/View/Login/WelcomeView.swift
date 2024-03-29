@@ -36,7 +36,7 @@ struct WelcomeView: View {
                     .padding(.bottom, 30)
                 
                 NavigationLink {
-//                    SignInView()
+                       SignInView()
                 } label: {
                     RoundButton(title: "Get Started") {
                     }

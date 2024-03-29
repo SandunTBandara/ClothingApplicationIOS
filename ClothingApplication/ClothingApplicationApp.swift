@@ -9,10 +9,21 @@ import SwiftUI
 
 @main
 struct ClothingApplicationApp: App {
+    
+    @StateObject var mainVM = MainViewModel.shared
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            WelcomeView()
+//            WelcomeView()
+            NavigationView {
+                
+                if mainVM.isUserLogin {
+                    MainTabView()
+                }else{
+                    WelcomeView()
+                }
+            }
+            
         }
     }
 }

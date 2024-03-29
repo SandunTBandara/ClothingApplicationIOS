@@ -68,7 +68,7 @@ struct LoginView: View {
                 
                 
                 NavigationLink {
-//                    SignUpView()
+                   SignUpView()
                 } label: {
                     HStack{
                         Text("Don’t have an account?")

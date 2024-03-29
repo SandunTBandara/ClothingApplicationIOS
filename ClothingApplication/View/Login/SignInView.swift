@@ -42,7 +42,7 @@ struct SignInView: View {
                    
                     
                     NavigationLink {
-//                        LoginView()
+                       LoginView()
                     } label: {
                         Text("Continue with Email Sign In")
                             .font(.customfont(.semibold, fontSize: 18))
@@ -56,7 +56,7 @@ struct SignInView: View {
                     
                     
                     NavigationLink {
-//                        SignUpView()
+                      SignUpView()
                     } label: {
                         Text("Continue with Email Sign Up")
                             .font(.customfont(.semibold, fontSize: 18))

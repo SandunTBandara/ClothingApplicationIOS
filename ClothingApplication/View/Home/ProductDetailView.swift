@@ -89,7 +89,7 @@ struct ProductDetailView: View {
                         }
                         
                         Spacer()
-                        Text( "$\(  (detailVM.pObj.offerPrice ?? detailVM.pObj.price) * Double(detailVM.qty) , specifier: "%.2f")"  )
+                        Text( "RS\(  (detailVM.pObj.offerPrice ?? detailVM.pObj.price) * Double(detailVM.qty) , specifier: "%.2f")"  )
                             .font(.customfont(.bold, fontSize: 28))
                             .foregroundColor(.primaryText)
                             
@@ -137,66 +137,6 @@ struct ProductDetailView: View {
                 }
                 .padding(.horizontal, 20)
                 
-                VStack{
-                    HStack{
-                        Text("Nutritions")
-                            .font(.customfont(.semibold, fontSize: 16))
-                            .foregroundColor(.primaryText)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        
-                        
-                        Text(detailVM.pObj.nutritionWeight)
-                            .font(.customfont(.semibold, fontSize: 10))
-                            .foregroundColor(.secondaryText)
-                            .padding(8)
-                            .background( Color.placeholder.opacity(0.5) )
-                            .cornerRadius(5)
-                        
-                        Button {
-                            withAnimation {
-                                detailVM.showNutrition()
-                            }
-                            
-                        } label: {
-                            
-                            Image( detailVM.isShowNutrition ? "detail_open" : "next"  )
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 15, height: 15)
-                                .padding(15)
-                        }
-                        .foregroundColor(Color.primaryText)
-
-                    }
-                    
-                    if(detailVM.isShowNutrition) {
-                        LazyVStack {
-                            
-                            ForEach( detailVM.nutritionArr , id: \.id) { nObj in
-                                HStack{
-                                    Text( nObj.nutritionName )
-                                        .font(.customfont(.semibold, fontSize: 15))
-                                        .foregroundColor(.secondaryText)
-                                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                    
-                                    Text( nObj.nutritionValue )
-                                        .font(.customfont(.semibold, fontSize: 15))
-                                        .foregroundColor(.primaryText)
-                                }
-                                
-                                Divider()
-                            }
-                            .padding(.vertical, 0)
-                           
-                            
-                        }
-                        .padding(.horizontal, 10)
-                    }
-                    
-                    
-                    Divider()
-                }
-                .padding(.horizontal, 20)
                 
                 HStack{
                     Text("Review")

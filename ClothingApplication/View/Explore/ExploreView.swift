@@ -12,7 +12,6 @@ struct ExploreView: View {
     @State var txtSearch: String = ""
     
     var columns = [
-        GridItem(.flexible(), spacing: 15),
         GridItem(.flexible(), spacing: 15)
     ]
     

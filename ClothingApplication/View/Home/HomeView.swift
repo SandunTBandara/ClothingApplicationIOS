@@ -14,21 +14,6 @@ struct HomeView: View {
         ZStack{
             ScrollView{
                 VStack{
-                    Image("color_logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 25)
-                    
-                    HStack{
-                        Image("location")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 16, height: 16 )
-                        
-                        Text("Dhaka, Banassre")
-                            .font(.customfont(.semibold, fontSize: 18))
-                            .foregroundColor(.darkGray)
-                    }
                     
                     SearchTextField(placholder: "Search Store", txt: $homeVM.txtSearch)
                         .padding(.horizontal, 20)
@@ -36,11 +21,12 @@ struct HomeView: View {
                 }
                 .padding(.top, .topInsets )
                 
-                Image("banner_top")
+                Image("banner1")
                     .resizable()
                     .scaledToFill()
-                    .frame(height: 115)
-                    .padding(.horizontal, 20)
+                    .frame(height: 100)
+                    .padding(.horizontal, 40)
+                    .padding(.vertical, 70)
                 
                 SectionTitleAll(title: "Exclusive offer", titleAll: "See All") {
                     

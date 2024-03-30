@@ -21,19 +21,8 @@ struct WelcomeView: View {
                 Image("logobrand")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 60, height: 60)
-                    .padding(.bottom, 8)
-                
-                Text( "Welcome\nto our store")
-                    .font(.customfont(.semibold, fontSize: 48))
-                    .foregroundColor(.black)
-                    .multilineTextAlignment(.center)
-                
-                Text( "all clothes in your hand")
-                    .font(.customfont(.medium, fontSize: 16))
-                    .foregroundColor(.black.opacity(0.7))
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 30)
+                    .frame(width: 100, height: 100)
+                    .padding(.bottom, 60)
                 
                 NavigationLink {
                        SignInView()
@@ -45,7 +34,7 @@ struct WelcomeView: View {
                
                 
                 Spacer()
-                    .frame(height: 80)
+                    .frame(height: 120)
                 
             }
             .padding(.horizontal , 20)

@@ -9,13 +9,10 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct ExploreCategoryCell: View {
-    @State var cObj: ExploreCategoryModel = ExploreCategoryModel(dict: [ : ])
-   
-   
+    @State var cObj: ExploreCategoryModel = ExploreCategoryModel(dict: [:])
     
     var body: some View {
-        VStack{
-            
+        VStack {
             WebImage(url: URL(string: cObj.image ))
                 .resizable()
                 .indicator(.activity) // Activity Indicator
@@ -23,24 +20,24 @@ struct ExploreCategoryCell: View {
                 .scaledToFit()
                 .frame(width: 120, height: 90)
             
-        
             Spacer()
+            
             Text(cObj.name)
                 .font(.customfont(.bold, fontSize: 16))
                 .foregroundColor(.primaryText)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             
             Spacer()
-            
         }
         .padding(15)
-        .background( cObj.color.opacity(0.3) )
+        .background(Color.gray.opacity(0.3)) // Change background color to blue
         .cornerRadius(16)
-        .overlay (
+        .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(cObj.color, lineWidth: 1)
+                .stroke(Color.blue, lineWidth: 1) // Stroke color also changed to blue
         )
-    }}
+    }
+}
 
 struct ExploreCategoryCell_Previews: PreviewProvider {
     static var previews: some View {

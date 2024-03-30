@@ -37,7 +37,7 @@ struct SignInView: View {
                         .font(.customfont(.semibold, fontSize: 26))
                         .foregroundColor(.primaryText)
                         .multilineTextAlignment(.leading)
-                        .padding(.bottom , 25)
+                        .padding(.bottom , 170)
                     
                    
                     
@@ -52,7 +52,7 @@ struct SignInView: View {
                     .frame( minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60 )
                     .background( Color(hex: "5383EC"))
                     .cornerRadius(20)
-                    .padding(.bottom, 8 )
+                    .padding(.bottom, 8)
                     
                     
                     NavigationLink {
@@ -78,45 +78,7 @@ struct SignInView: View {
                         .multilineTextAlignment(.center)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
                         .padding(.bottom , 25)
-                    
-                    
-                    Button {
-                       
-                    } label: {
-                        
-                        Image("google_logo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-                        
-                        Text("Continue with Google")
-                            .font(.customfont(.semibold, fontSize: 18))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                    }
-                    .frame( minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60 )
-                    .background( Color(hex: "5383EC"))
-                    .cornerRadius(20)
-                    .padding(.bottom, 8 )
-                    
-                    
-                    Button {
-                       
-                    } label: {
-                        
-                        Image("fb_logo")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-
-                        Text("Continue with Facebook")
-                            .font(.customfont(.semibold, fontSize: 18))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                    }
-                    .frame( minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60 )
-                    .background( Color(hex: "4A66AC"))
-                    .cornerRadius(20)
+                
                     
                 }
                 .padding(.horizontal, 20)

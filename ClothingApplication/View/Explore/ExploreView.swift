@@ -11,63 +11,50 @@ struct ExploreView: View {
     @StateObject var explorVM = ExploreViewModel.shared
     @State var txtSearch: String = ""
     
-    var colums =  [
+    var columns = [
         GridItem(.flexible(), spacing: 15),
         GridItem(.flexible(), spacing: 15)
     ]
     
-    
     var body: some View {
-        ZStack{
+        VStack {
+            Text("Find Products")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.top, 50)
             
-            VStack{
-                HStack{
-                    
-                    Spacer()
-                    
-                    Text("Find Products")
-                        .font(.customfont(.bold, fontSize: 20))
-                        .frame(height: 46)
-                    Spacer()
-                    
-                }
-                .padding(.top, .topInsets)
-                
-                SearchTextField(placholder: "Search Store", txt: $txtSearch)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 4)
-                
-                ScrollView {
-                    LazyVGrid(columns: colums, spacing: 20) {
-                        ForEach(explorVM.listArr, id: \.id) {
-                            cObj in
-                            
-                            NavigationLink(destination: ExploreItemsView(itemsVM: ExploreItemViewModel(catObj: cObj) ) ) {
-                                ExploreCategoryCell(cObj: cObj)
-                                    .aspectRatio( 0.95, contentMode: .fill)
-                            }
-                            
+            TextField("Search Store", text: $txtSearch)
+                .font(.subheadline)
+                .padding(.horizontal, 20)
+                .padding(.bottom, 20)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(explorVM.listArr, id: \.id) { cObj in
+                        NavigationLink(destination: ExploreItemsView(itemsVM: ExploreItemViewModel(catObj: cObj))) {
+                            ExploreCategoryCell(cObj: cObj)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 300) // Adjust the height as needed
+                                .cornerRadius(12)
+                                .shadow(radius: 4)
                         }
                     }
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 10)
-                    .padding(.bottom, .bottomInsets + 60)
                 }
-                
+                .padding(.horizontal, 2)
+                .padding(.bottom, 20)
             }
-            
         }
-        .ignoresSafeArea()
+        .padding(.horizontal, 2)
+        .navigationBarTitle("Explore", displayMode: .inline)
     }
 }
 
 struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
-        
         NavigationView {
             ExploreView()
         }
-        
     }
 }
 

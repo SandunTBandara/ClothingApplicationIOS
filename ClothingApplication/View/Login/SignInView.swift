@@ -72,7 +72,7 @@ struct SignInView: View {
                     Divider()
                         .padding(.bottom, 25)
                 
-                    Text( "Or connect with social media")
+                    Text( "Follow us on social media")
                         .font(.customfont(.semibold, fontSize: 14))
                         .foregroundColor(.textTitle)
                         .multilineTextAlignment(.center)

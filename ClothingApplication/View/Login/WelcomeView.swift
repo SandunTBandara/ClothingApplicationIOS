@@ -10,19 +10,13 @@ import SwiftUI
 struct WelcomeView: View {
     var body: some View {
         ZStack{
-            Image("femalebuy")
+            Image("Thread Clothing")
                 .resizable()
                 .scaledToFill()
                 .frame(width: .screenWidth, height: .screenHeight)
             
             VStack{
                 Spacer()
-                
-                Image("logobrand")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
-                    .padding(.bottom, 60)
                 
                 NavigationLink {
                        SignInView()

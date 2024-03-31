@@ -77,7 +77,7 @@ struct CartItemRow: View {
                             CartViewModel.shared.serviceCallUpdateQty(cObj: cObj, newQty: cObj.qty + 1)
                         } label: {
                             
-                            Image( "add_green"  )
+                            Image( "plus"  )
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 20, height: 20)

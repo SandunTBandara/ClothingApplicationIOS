@@ -14,46 +14,24 @@ struct HomeView: View {
         ZStack{
             ScrollView{
                 VStack{
+                    Image("Thread Clothing logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50)
+                    Text("Thread Clothing ").font(.headline).foregroundColor(.primaryText)
                     
-                    SearchTextField(placholder: "Search Store", txt: $homeVM.txtSearch)
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 10)
                 }
                 .padding(.top, .topInsets )
                 
-                Image("banner1")
+                Image("Thread Clothing banner")
                     .resizable()
                     .scaledToFill()
                     .frame(height: 100)
-                    .padding(.horizontal, 40)
-                    .padding(.vertical, 70)
+                    .padding(.horizontal, 0)
+                    .padding(.vertical, 20)
+               
                 
-                SectionTitleAll(title: "Exclusive offer", titleAll: "See All") {
-                    
-                }
-                .padding(.horizontal, 20)
-                
-                ScrollView(.horizontal, showsIndicators: false ) {
-                    LazyHStack(spacing: 15) {
-                        ForEach (homeVM.offerArr, id: \.id) {
-                            pObj in
-                            
-                            ProductCell(pObj: pObj, didAddCart: {
-                                
-                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
-                                    
-                                    self.homeVM.errorMessage = msg
-                                    self.homeVM.showError = true
-                                }
-                            })
-                        }
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 4)
-                }
-                
-                
-                SectionTitleAll(title: "Best Selling", titleAll: "See All") {
+                SectionTitleAll(title: "Most Polpular -") {
                     
                 }
                 .padding(.horizontal, 20)
@@ -76,7 +54,7 @@ struct HomeView: View {
                     .padding(.vertical, 4)
                 }
                 
-                SectionTitleAll(title: "Groceries", titleAll: "See All") {
+                SectionTitleAll(title: "Hot News - ") {
                     
                 }
                 .padding(.horizontal, 20)
@@ -97,6 +75,10 @@ struct HomeView: View {
                 }
                 .padding(.bottom, 8)
                 
+                SectionTitleAll(title: "Browse More -") {
+                    
+                }
+                .padding(.horizontal, 20)
                 ScrollView(.horizontal, showsIndicators: false ) {
                     LazyHStack(spacing: 15) {
                         ForEach (homeVM.listArr, id: \.id) {

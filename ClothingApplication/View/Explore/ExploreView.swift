@@ -17,16 +17,10 @@ struct ExploreView: View {
     
     var body: some View {
         VStack {
-            Text("Find Products")
+            Text("Explore Caegories")
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.top, 50)
-            
-            TextField("Search Store", text: $txtSearch)
-                .font(.subheadline)
-                .padding(.horizontal, 20)
-                .padding(.bottom, 20)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
             
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {

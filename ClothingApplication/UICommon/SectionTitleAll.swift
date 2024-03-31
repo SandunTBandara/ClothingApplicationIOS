@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SectionTitleAll: View {
     @State var title: String = " Title"
-    @State var titleAll: String = "View All"
     var didTap : (()->())?
     
     var body: some View {
@@ -17,13 +16,8 @@ struct SectionTitleAll: View {
         HStack{
             Text(title)
                 .font(.customfont(.semibold, fontSize: 24))
-                .foregroundColor(.primaryText)
-            
-            Spacer()
-            
-            Text(titleAll)
-                .font(.customfont(.semibold, fontSize: 16))
-                .foregroundColor(.primaryApp)
+                .foregroundColor(.Turquis)
+                 Spacer()
             
         }
         .frame(height: 40)

@@ -25,7 +25,7 @@ struct PaymentMethodsView: View {
                         
                         HStack(spacing: 15) {
                                 
-                            Image("paymenth_methods")
+                            Image("credit-card")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 35, height: 35)
@@ -100,9 +100,9 @@ struct PaymentMethodsView: View {
                     Spacer()
                     
                     NavigationLink {
-//                        AddPaymentMethodView( )
+                      AddPaymentMethodView( )
                     } label: {
-                        Image("add_temp")
+                        Image("plus")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 20, height: 20)

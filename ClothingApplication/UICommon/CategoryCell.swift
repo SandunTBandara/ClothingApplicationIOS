@@ -27,7 +27,7 @@ struct CategoryCell: View {
             
             Text(tObj.name)
                 .font(.customfont(.bold, fontSize: 16))
-                .foregroundColor(.primaryText)
+                .foregroundColor(.red)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
             
         }

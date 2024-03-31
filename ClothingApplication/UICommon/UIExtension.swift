@@ -72,11 +72,11 @@ extension CGFloat {
 extension Color {
     
     static var primaryApp: Color {
-        return Color(hex: "53B175")
+        return Color(hex: "#1F51FF")
     }
     
     static var primaryText: Color {
-        return Color(hex: "030303")
+        return Color(hex: "#1F51FF")
     }
     
     static var secondaryText: Color {
@@ -95,6 +95,9 @@ extension Color {
         return Color(hex: "4C4F4D")
     }
     
+    static var Turquis: Color {
+        return Color(hex: "#6082B6")
+    }
     
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: .alphanumerics.inverted)

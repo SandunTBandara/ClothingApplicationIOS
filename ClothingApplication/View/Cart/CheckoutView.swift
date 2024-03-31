@@ -53,7 +53,6 @@ struct CheckoutView: View {
                         
                         Picker("",  selection: $cartVM.deliveryType) {
                             Text("Delivery").tag(1)
-                            Text("Collection").tag(2)
                         }
                         .pickerStyle(.segmented)
                         .frame(width: 180)
@@ -163,7 +162,7 @@ struct CheckoutView: View {
                         
                         Spacer()
                         
-                        Text("$ \(cartVM.total)")
+                        Text("RS \(cartVM.total)")
                             .font(.customfont(.semibold, fontSize: 16))
                             .foregroundColor(.secondaryText)
                     }
@@ -175,7 +174,7 @@ struct CheckoutView: View {
                         
                         Spacer()
                         
-                        Text("+ $ \(cartVM.deliverPriceAmount)")
+                        Text("+ RS \(cartVM.deliverPriceAmount)")
                             .font(.customfont(.semibold, fontSize: 16))
                             .foregroundColor(.secondaryText)
                     }
@@ -187,7 +186,7 @@ struct CheckoutView: View {
                         
                         Spacer()
                         
-                        Text("- $ \(cartVM.discountAmount)")
+                        Text("- RS \(cartVM.discountAmount)")
                             .font(.customfont(.semibold, fontSize: 16))
                             .foregroundColor(.red)
                     }
@@ -206,7 +205,7 @@ struct CheckoutView: View {
                     
                     
                     
-                    Text("$\(cartVM.userPayAmount)")
+                    Text("RS\(cartVM.userPayAmount)")
                         .font(.customfont(.semibold, fontSize: 18))
                         .foregroundColor(.primaryText)
                         .frame(height: 46)

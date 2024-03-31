@@ -130,9 +130,9 @@ struct DelieryAddressView: View {
                     
                     
                     NavigationLink {
-//                        AddDeliveryAddressView()
+                       AddDeliveryAddressView()
                     } label: {
-                        Image("add_temp")
+                        Image("plus")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 20, height: 20)

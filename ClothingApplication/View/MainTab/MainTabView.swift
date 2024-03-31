@@ -16,13 +16,13 @@ struct MainTabView: View {
             
             if(homeVM.selectTab == 0) {
                 HomeView()
-            }else if(homeVM.selectTab == 1) {
+            }
+            else if(homeVM.selectTab == 1) {
                 ExploreView()
             }
-            else if(homeVM.selectTab == 2) {
-                MyCartView()
-            }
-//            else if(homeVM.selectTab == 3) {
+//            else if(homeVM.selectTab == 2) {
+//                MyCartView()
+//            }else if(homeVM.selectTab == 3) {
 //                FavouriteView()
 //            }else if(homeVM.selectTab == 4) {
 //                AccountView()
@@ -61,24 +61,6 @@ struct MainTabView: View {
                              
                             withAnimation {
                                 homeVM.selectTab = 2
-                            }
-                        }
-                    }
-                    
-//                    TabButton(title: "Favourite", icon: "fav_tab", isSelect: homeVM.selectTab == 3) {
-//                        DispatchQueue.main.async {
-//                             
-//                            withAnimation {
-//                                homeVM.selectTab = 3
-//                            }
-//                        }
-//                    }
-                    
-                    TabButton(title: "Account", icon: "account_tab", isSelect: homeVM.selectTab == 4) {
-                        DispatchQueue.main.async {
-                             
-                            withAnimation {
-                                homeVM.selectTab = 4
                             }
                         }
                     }

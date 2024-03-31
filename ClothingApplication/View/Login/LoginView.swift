@@ -73,11 +73,11 @@ struct LoginView: View {
                     HStack{
                         Text("Don’t have an account?")
                             .font(.customfont(.semibold, fontSize: 14))
-                            .foregroundColor(.primaryText)
+                            .foregroundColor(.black)
                         
                         Text("Signup")
                             .font(.customfont(.semibold, fontSize: 14))
-                            .foregroundColor(.primaryApp)
+                            .foregroundColor(.blue)
                     }
                 }
 

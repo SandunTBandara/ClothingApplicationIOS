@@ -32,7 +32,7 @@ struct LoginView: View {
                     .padding(.bottom, .screenWidth * 0.1)
                 
                 
-                Text("Loging")
+                Text("Login")
                     .font(.customfont(.semibold, fontSize: 26))
                     .foregroundColor(.primaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -44,10 +44,10 @@ struct LoginView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, .screenWidth * 0.1)
                 
-                LineTextField( title: "Email", placholder: "Enter your email address", txt: $loginVM.txtEmail, keyboardType: .emailAddress)
+                LineTextField( title: "Email", placholder: "email address", txt: $loginVM.txtEmail, keyboardType: .emailAddress)
                     .padding(.bottom, .screenWidth * 0.07)
                 
-                LineSecureField( title: "Password", placholder: "Enter your password", txt: $loginVM.txtPassword, isShowPassword: $loginVM.isShowPassword)
+                LineSecureField( title: "Password", placholder: "password", txt: $loginVM.txtPassword, isShowPassword: $loginVM.isShowPassword)
                     .padding(.bottom, .screenWidth * 0.02)
                 
                 RoundButton(title: "Log In") {

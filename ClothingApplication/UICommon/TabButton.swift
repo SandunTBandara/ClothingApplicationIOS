@@ -1,47 +1,29 @@
-//
-//  TabButton.swift
-//  ClothingApplication
-//
-//  Created by Sandun Bandara on 2024-03-29.
-//
-
 import SwiftUI
 
 struct TabButton: View {
     
-    @State var title: String = "Title"
-    @State var icon: String = "store_tab"
-    var isSelect: Bool = false
+    var title: String
+    var isSelect: Bool
     var didSelect: (()->())
     
     var body: some View {
-        Button {
-            debugPrint("Tab Button Tap")
+        Button(action: {
             didSelect()
-        } label: {
-            VStack{
-                Image(icon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 25, height: 25)
-                
+        }, label: {
+            VStack(spacing: 6) {
+             
                 
                 Text(title)
-                    .font(.customfont(.semibold, fontSize: 14))
-                
-                    
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .foregroundColor(isSelect ? .blue : .black)
             }
-        }
-        .foregroundColor(isSelect ? .primaryApp : .primaryText )
-        .frame(minWidth: 0, maxWidth: .infinity)
+            .padding(10)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.white)
+                    .shadow(color: .gray, radius: 3, x: 0, y: 0)
+            )
+        })
     }
 }
-
-struct TabButton_Previews: PreviewProvider {
-    static var previews: some View {
-        TabButton {
-            print("Test")
-        }
-    }
-}
-

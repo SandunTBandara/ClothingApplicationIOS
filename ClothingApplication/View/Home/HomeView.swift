@@ -1,14 +1,8 @@
-//
-//  HomeView.swift
-//  ClothingApplication
-//
-//  Created by Sandun Bandara on 2024-03-29.
-//
-
 import SwiftUI
 
 struct HomeView: View {
     @StateObject var homeVM = HomeViewModel.shared
+    @State private var showingCartView = false // State to control the cart view presentation
     
     var body: some View {
         ZStack{
@@ -19,7 +13,6 @@ struct HomeView: View {
                         .scaledToFit()
                         .frame(width: 50)
                     Text("Thread Clothing ").font(.headline).foregroundColor(.primaryText)
-                    
                 }
                 .padding(.top, .topInsets )
                 
@@ -99,6 +92,28 @@ struct HomeView: View {
                 .padding(.bottom, .bottomInsets + 60)
                 
             }
+            
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        showingCartView.toggle() // Toggle the state to show/hide cart view
+                    }) {
+                        Image(systemName: "cart")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(.primary)
+                            .padding()
+                    }
+                    .sheet(isPresented: $showingCartView) {
+                        NavigationView {
+                            MyCartView()
+                        }
+                    }
+                }
+                Spacer()
+            }
+            .padding(.top, .topInsets + 20) // Adjust top padding to accommodate the status bar
         }
         .alert(isPresented: $homeVM.showError, content: {
             Alert(title: Text(Globs.AppName), message: Text(homeVM.errorMessage), dismissButton: .default(Text("OK")) )
@@ -114,4 +129,3 @@ struct HomeView_Previews: PreviewProvider {
         }
     }
 }
-

@@ -16,24 +16,10 @@ struct SignInView: View {
     var body: some View {
         ZStack{
             
-            Image("clotheimg1")
-            .resizable()
-            .scaledToFill()
-            .frame(width: .screenWidth, height: .screenHeight)
-            
-            VStack{
-                Image("clotheimg1")
-                .resizable()
-                .scaledToFill()
-                .frame(width: .screenWidth, height: .screenWidth)
-                
-                Spacer()
-            }
-            
             ScrollView{
                     
                 VStack(alignment: .leading){
-                    Text( "Lets buy your favourite clothes")
+                    Text( "Start Journey")
                         .font(.customfont(.semibold, fontSize: 26))
                         .foregroundColor(.primaryText)
                         .multilineTextAlignment(.leading)

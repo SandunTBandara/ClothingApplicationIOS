@@ -39,10 +39,18 @@ struct CheckoutView: View {
                 }
                 .padding(.top, 30)
                 
-                Divider()
+                
                 
                 
                 VStack{
+                    HStack {
+                        
+                        Picker("",  selection: $cartVM.deliveryType) {
+                            Text("Gome Delivery").tag(1)
+                        }
+                        .pickerStyle(.segmented)
+                        .frame(width: 180)
+                    }.hidden()
                     HStack {
                         Text("Delivery Type")
                             .font(.customfont(.semibold, fontSize: 18))
@@ -51,11 +59,10 @@ struct CheckoutView: View {
                         
                         Spacer()
                         
-                        Picker("",  selection: $cartVM.deliveryType) {
-                            Text("Delivery").tag(1)
-                        }
-                        .pickerStyle(.segmented)
-                        .frame(width: 180)
+                        Text("Home Delivery")
+                            .font(.customfont(.semibold, fontSize: 15))
+                            .foregroundColor(.primaryText)
+                            .frame(height: 46)
                     }
                     
                     Divider()
@@ -69,14 +76,14 @@ struct CheckoutView: View {
                             } )
                         } label: {
                             HStack {
-                                Text("Delivery")
+                                Text("Delivery Address")
                                     .font(.customfont(.semibold, fontSize: 18))
                                     .foregroundColor(.secondaryText)
                                     .frame(height: 46)
                                 
                                 Spacer()
                                 
-                                Text( cartVM.deliverObj?.name ?? "Select Method")
+                                Text( cartVM.deliverObj?.name ?? "Select Address")
                                     .font(.customfont(.semibold, fontSize: 18))
                                     .foregroundColor(.primaryText)
                                     .frame(height: 46)
@@ -180,7 +187,7 @@ struct CheckoutView: View {
                     }
                     
                     HStack {
-                        Text("Discount")
+                        Text("Save")
                             .font(.customfont(.semibold, fontSize: 16))
                             .foregroundColor(.secondaryText)
                         
@@ -196,7 +203,7 @@ struct CheckoutView: View {
                 .padding(.top, 15)
                 
                 HStack {
-                    Text("Final Total")
+                    Text("     Final Total")
                         .font(.customfont(.semibold, fontSize: 18))
                         .foregroundColor(.secondaryText)
                         .frame(height: 46)
@@ -219,33 +226,6 @@ struct CheckoutView: View {
                 }
                 Divider()
                 
-                VStack {
-                    Text("By continuing you agree to our")
-                        .font(.customfont(.semibold, fontSize: 14))
-                        .foregroundColor(.secondaryText)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    
-                    HStack{
-                        
-                        Text("Terms of Service")
-                            .font(.customfont(.semibold, fontSize: 14))
-                            .foregroundColor(.primaryText)
-                        
-                        
-                        Text(" and ")
-                            .font(.customfont(.semibold, fontSize: 14))
-                            .foregroundColor(.secondaryText)
-                        
-                        
-                        Text("Privacy Policy.")
-                            .font(.customfont(.semibold, fontSize: 14))
-                            .foregroundColor(.primaryText)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        
-                    }
-                    
-                }
-                .padding(.vertical, .screenWidth * 0.03)
                 
                 RoundButton(title: "Place Order") {
                     cartVM.serviceCallOrderPlace()

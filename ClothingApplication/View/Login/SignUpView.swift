@@ -23,26 +23,16 @@ struct SignUpView: View {
             ScrollView {
                 VStack{
                     
-                    
-                    
-                    Image("color_logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40)
-                        .padding(.bottom, .screenWidth * 0.1)
-                    
+
+                    Spacer();
+                    Spacer();
                     
                     Text("Sign Up")
                         .font(.customfont(.semibold, fontSize: 26))
                         .foregroundColor(.primaryText)
                         .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .padding(.bottom, 4)
+                        .padding(.bottom, 50)
                     
-                    Text("Enter your credentials to continue")
-                        .font(.customfont(.semibold, fontSize: 16))
-                        .foregroundColor(.secondaryText)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .padding(.bottom, .screenWidth * 0.1)
                     
                     
                     LineTextField( title: "Username", placholder: "Enter your username", txt: $mainVM.txtUsername)
@@ -52,34 +42,8 @@ struct SignUpView: View {
                         .padding(.bottom, .screenWidth * 0.07)
                     
                     LineSecureField( title: "Password", placholder: "Enter your password", txt: $mainVM.txtPassword, isShowPassword: $mainVM.isShowPassword)
-                        .padding(.bottom, .screenWidth * 0.04)
-                    
-                    VStack {
-                        Text("By continuing you agree to our")
-                            .font(.customfont(.medium, fontSize: 14))
-                            .foregroundColor(.secondaryText)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        
-                        HStack{
-                            
-                            Text("Terms of Service")
-                                .font(.customfont(.medium, fontSize: 14))
-                                .foregroundColor(.primaryApp)
-                                
-                            
-                            Text(" and ")
-                                .font(.customfont(.medium, fontSize: 14))
-                                .foregroundColor(.secondaryText)
-                                
-                            
-                            Text("Privacy Policy.")
-                                .font(.customfont(.medium, fontSize: 14))
-                                .foregroundColor(.primaryApp)
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                
-                        }
-                        .padding(.bottom, .screenWidth * 0.02)
-                    }
+                        .padding(.bottom, .screenWidth * 0.04).padding(.bottom, 20)
+        
                     
                     
                     RoundButton(title: "Sing Up") {

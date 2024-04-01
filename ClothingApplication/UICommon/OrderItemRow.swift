@@ -2,7 +2,7 @@
 //  OrderItemRow.swift
 //  ClothingApplication
 //
-//  Created by Sandun Bandara on 2024-04-01.
+//  Created by Sandun Bandara on 2024-03-25.
 //
 
 import SwiftUI
@@ -12,66 +12,61 @@ struct OrderItemRow: View {
     @State var pObj: OrderItemModel = OrderItemModel(dict: [:])
     
     var body: some View {
-        
-            HStack(spacing: 15){
-                WebImage(url: URL(string: pObj.image ))
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 15) {
+                WebImage(url: URL(string: pObj.image))
                     .resizable()
-                    .indicator(.activity) // Activity Indicator
+                    .indicator(.activity)
                     .transition(.fade(duration: 0.5))
                     .scaledToFit()
                     .frame(width: 60, height: 60)
+                    .cornerRadius(8)
                 
-                VStack(spacing: 4){
-                    
+                VStack(alignment: .leading, spacing: 4) {
                     Text(pObj.name)
                         .font(.customfont(.bold, fontSize: 16))
                         .foregroundColor(.primaryText)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     
-                    Text("\(pObj.unitValue)\(pObj.unitName), price")
-                        .font(.customfont(.medium, fontSize: 14))
+                    Text("\(pObj.unitValue)\(pObj.unitName), Price")
+                        .font(.customfont(.medium, fontSize: 12))
                         .foregroundColor(.secondaryText)
-                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                        .padding(.bottom, 8)
+                        .lineLimit(1)
                     
                     HStack {
                         Text("QTY:")
-                            .font(.customfont(.bold, fontSize: 16))
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                         
-                        Text("\( pObj.qty )")
-                            .font(.customfont(.bold, fontSize: 16))
+                        Text("\(pObj.qty)")
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                         
                         Text("×")
-                            .font(.customfont(.bold, fontSize: 16))
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
                         
-                        Text("RS \( pObj.itemPrice, specifier: "%.2f" )")
-                            .font(.customfont(.bold, fontSize: 16))
+                        Text("RS \(pObj.itemPrice, specifier: "%.2f")")
+                            .font(.customfont(.bold, fontSize: 14))
                             .foregroundColor(.primaryText)
-                        
-                        
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    
                 }
                 
-                Text("RS\(pObj.offerPrice ?? pObj.price, specifier: "%.2f" )")
+                Spacer()
+                
+                Text("RS \(pObj.offerPrice ?? pObj.price, specifier: "%.2f")")
                     .font(.customfont(.semibold, fontSize: 18))
                     .foregroundColor(.primaryText)
-                
-                
             }
-            .padding(15)
+            .padding(12)
             .background(Color.white)
-            .cornerRadius(5)
-            .shadow(color: Color.black.opacity(0.15), radius: 2)
-            .padding(.horizontal, 20)
-            .padding(.vertical, 4)
-        
+            .cornerRadius(8)
+            .shadow(color: Color.black.opacity(0.1), radius: 2)
+        }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 8)
     }
 }
+
 
 struct OrderItemRow_Previews: PreviewProvider {
     static var previews: some View {

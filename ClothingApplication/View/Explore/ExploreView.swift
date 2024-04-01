@@ -17,7 +17,7 @@ struct ExploreView: View {
     
     var body: some View {
         VStack {
-            Text("Explore Caegories")
+            Text("Explore Our Collection")
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.top, 50)

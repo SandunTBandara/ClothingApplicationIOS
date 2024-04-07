@@ -2,7 +2,7 @@
 //  SignUpView.swift
 //  ClothingApplication
 //
-//  Created by Sandun Bandara on 2024-03-29.
+//  Created by Sandun Bandara on 2024-03-24.
 //
 
 import SwiftUI

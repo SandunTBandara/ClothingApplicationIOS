@@ -2,7 +2,7 @@
 //  DelieryAddressView.swift
 //  ClothingApplication
 //
-//  Created by Sandun Bandara on 2024-03-30.
+//  Created by Sandun Bandara on 2024-04-06.
 //
 
 import SwiftUI
@@ -58,19 +58,7 @@ struct DelieryAddressView: View {
                             VStack{
                                 
                                 Spacer()
-                                
-                                NavigationLink {
-//                                    AddDeliveryAddressView(isEdit: true, editObj: aObj  )
-                                } label: {
-                                    Image(systemName: "pencil")
-                                        .resizable()
-                                        .frame(width: 20, height: 20)
-                                        .foregroundColor(.primaryApp)
-                                }
-                                .padding(.bottom, 8)
-
-                               
-                                
+                            
                                 Button {
                                     addressVM.serviceCallRemove(cObj: aObj)
                                 } label: {

@@ -41,10 +41,6 @@ struct OrderAccpetView: View {
                 Spacer()
                 Spacer()
                 
-                RoundButton(title: "Track Order") {
-                    
-                }
-                
                 Button {
                     mode.wrappedValue.dismiss()
                 } label: {

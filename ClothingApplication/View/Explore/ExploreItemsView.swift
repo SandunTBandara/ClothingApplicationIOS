@@ -80,17 +80,3 @@ struct ExploreItemsView: View {
     }
 }
 
-struct ExploreItemsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            ExploreItemsView(itemsVM: ExploreItemViewModel(catObj: ExploreCategoryModel(dict: [
-                "cat_id": 1,
-                "cat_name": "Frash Fruits & Vegetable",
-                "image": "http://192.168.1.3:3001/img/category/20230726155407547qM5gSxkrCh.png",
-                "color": "53B175"
-            ] ) ))
-        }
-        
-    }
-}
-

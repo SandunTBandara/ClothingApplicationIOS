@@ -2,7 +2,7 @@
 //  MyOrderDetailViewModel.swift
 //  ClothingApplication
 //
-//  Created by Sandun Bandara on 2024-04-01.
+//  Created by Sandun Bandara on 2024-04-06.
 //
 
 import SwiftUI
@@ -48,3 +48,4 @@ class MyOrderDetailViewModel: ObservableObject {
         }
     }
 }
+

@@ -2,7 +2,7 @@
 //  PromoCodeModel.swift
 //  ClothingApplication
 //
-//  Created by Sandun Bandara on 2024-04-01.
+//  Created by Sandun Bandara on 2024-04-03.
 //
 
 import SwiftUI

@@ -2,7 +2,7 @@
 //  DeliveryAddressViewModel.swift
 //  ClothingApplication
 //
-//  Created by Sandun Bandara on 2024-03-30.
+//  Created by Sandun Bandara on 2024-04-04.
 //
 
 import SwiftUI
@@ -94,25 +94,7 @@ class DeliveryAddressViewModel: ObservableObject
         }
     }
     
-    func serviceCallUpdateAddress( aObj: AddressModel?, didDone: (( )->())? ) {
-        ServiceCall.post(parameter: ["address_id":  aObj?.id ?? "", "name":  txtName, "type_name": txtTypeName, "phone": txtMobile, "address": txtAddress, "city": txtCity, "state": txtState, "postal_code": txtPostalCode ], path: Globs.SV_UPDATE_ADDRESS, isToken: true ) { responseObj in
-            if let response = responseObj as? NSDictionary {
-                if response.value(forKey: KKey.status) as? String ?? "" == "1" {
-                    self.clearAll()
-                    self.serviceCallList()
-                    didDone?()
-                }else{
-                    self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
-                    self.showError = true
-                }
-            }
-        } failure: { error in
-            self.errorMessage = error?.localizedDescription ?? "Fail"
-            self.showError = true
-        }
 
-    }
-    
     func serviceCallAddAddress(didDone: ((  )->())? ) {
         ServiceCall.post(parameter: ["name":  txtName, "type_name": txtTypeName, "phone": txtMobile, "address": txtAddress, "city": txtCity, "state": txtState, "postal_code": txtPostalCode  ], path: Globs.SV_ADD_ADDRESS, isToken: true ) { responseObj in
             if let response = responseObj as? NSDictionary {

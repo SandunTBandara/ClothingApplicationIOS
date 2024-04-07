@@ -62,15 +62,9 @@ struct AddDeliveryAddressView: View {
                     LineTextField(title: "Postal Code", placholder: "Enter you postal code" , txt: $addressVM.txtPostalCode)
                     
                     RoundButton(title: isEdit ? "Update Address" : "Add Address") {
-                        if(isEdit) {
-                            addressVM.serviceCallUpdateAddress(aObj: editObj) {
-                                self.mode.wrappedValue.dismiss()
-                            }
-                        }else{
                             addressVM.serviceCallAddAddress {
                                 self.mode.wrappedValue.dismiss()
                             }
-                        }
                     }
                     
                 }

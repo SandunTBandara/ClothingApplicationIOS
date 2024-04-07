@@ -291,34 +291,3 @@ struct MyOrdersDetailView: View {
     }
 }
 
-struct MyOrdersDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        MyOrdersDetailView(detailVM: MyOrderDetailViewModel(prodObj: MyOrderModel(dict: [
-            
-            
-                        "order_id": 4,
-                        "cart_id": "22,23",
-                        "total_price": 10.450000000000001,
-                        "user_pay_price": 11.405000000000001,
-                        "discount_price": 1.0450000000000002,
-                        "deliver_price": 2,
-                        "deliver_type": 1,
-                        "payment_type": 2,
-                        "payment_status": 2,
-                        "order_status": 1,
-                        "status": 1,
-                        "created_date": "2023-08-10T05:09:14.000Z",
-                        "names": "Organic Banana,Red Apple",
-                        "images": "http://localhost:3001/img/product/202307310947354735xuruflIucc.png,http://localhost:3001/img/product/202307310951365136W6nJvPCdzQ.png",
-                        "user_name": "My Home",
-                        "phone": "98765432102",
-                        "address": "246/ A, Dhutpeshwar Bldg, Girgaon Road, Near Gai Wadi, Girgaon",
-                        "city": "Mumbai",
-                        "state": "Maharashtra",
-                        "postal_code": "400004"
-                    
-            
-        ])))
-    }
-}
-

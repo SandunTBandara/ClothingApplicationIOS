@@ -28,14 +28,3 @@ struct ExploreCategoryCell: View {
     }
 }
 
-struct ExploreCategoryCell_Previews: PreviewProvider {
-    static var previews: some View {
-        ExploreCategoryCell(cObj: ExploreCategoryModel(dict: [
-            "cat_id": 1,
-            "cat_name": "Pulses",
-            "image": "http://192.168.1.3:3001/img/type/202307261610181018aVOpgmY1W1.png",
-            "color": "F8A44C"
-        ]))
-        .padding(20)
-    }
-}
